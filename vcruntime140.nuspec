@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Vcruntime140</id>
+    <version>14.16.27012</version>
+    <title>Microsoft Visual Studio 2015 Runtime for .NET Core</title>
+    <authors>Erik Heemskerk</authors>
+    <owners>Erik Heemskerk</owners>
+    <description>Contains the vcruntime140.dll needed to get certain native libraries working in .NET Core on Windows.</description>
+    <tags>vcruntime140 msvcrt</tags>
+    <repository url="https://github.com/heemskerkerik/vcruntime140" />
+    <contentFiles>
+      <files include="**\vcruntime140.dll" buildAction="None" copyToOutput="true" />
+    </contentFiles>
+    <license type="expression">MIT</license>
+  </metadata>
+</package>
