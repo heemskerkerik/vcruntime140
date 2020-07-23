@@ -3,9 +3,7 @@ name: Publish NuGet package
 on:
   push:
     branches: [ master ]
-    # paths: vcruntime140.nuspec
-  pull_request:
-    branches: [ master ]
+    paths: vcruntime140.nuspec
 
 jobs:
   build:
