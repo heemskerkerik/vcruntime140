@@ -21,4 +21,4 @@ jobs:
 
     - run: nuget pack vcruntime140.nuspec
 
-    - run: nuget push *.nupkg
+    - run: nuget push *.nupkg -source https://api.nuget.org/v3/index.json
