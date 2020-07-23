@@ -1,0 +1,22 @@
+name: Publish NuGet package
+
+on:
+  push:
+    branches: [ master ]
+    paths: vcruntime140.nuspec
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup NuGet.exe for use with actions
+      uses: NuGet/setup-nuget@v1.0.2
+      with:
+        nuget-api-key: ${{ secrets.NUGET_API_KEY }}
+
+    - run: nuget pack vcruntime140.nuspec
+
+    - run: nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate
