@@ -21,4 +21,4 @@ jobs:
 
     - run: nuget pack vcruntime140.nuspec
 
-    - run: nuget publish *.nupkg
+    - run: nuget push *.nupkg
